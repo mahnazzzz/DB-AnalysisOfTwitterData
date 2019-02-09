@@ -1,4 +1,8 @@
 
+# Used program
+
+- Python
+- MongoDB
 
 # Assignment  Analysis of Twitter Data
 
