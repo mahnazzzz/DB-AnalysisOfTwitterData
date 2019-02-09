@@ -1,6 +1,6 @@
-# DB-AnalysisOfTwitterData
 
-#Assignment  Analysis of Twitter Data
+
+# Assignment  Analysis of Twitter Data
 
 Implement a small database application, which imports a dataset of Twitter tweets from the CSV file into database.
 
