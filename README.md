@@ -95,6 +95,7 @@ Application has to be able to answer queries corresponding to the following ques
 When it comes to scaling database, there are challenges, but it is good there is some options. The easiest option, of course, is to scale up your hardware and other choice is sharding or trying to shrink the problem with microservices etc.
 
 - Five sharding approaches
+
 1- Sharding by Customer or Tenant:
 
 Multi-tenant applications is that their data model develop gradually over time to provide more and more functionality.  sharding by tenant is a safe (and recommended) approach.  
