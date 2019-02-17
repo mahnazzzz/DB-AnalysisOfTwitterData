@@ -7,7 +7,7 @@
 
 # Import Data
 
-In terminal in virtualmachine 
+In Pycharm in terminal 
 
 - $ docker run --rm -v $(pwd)/data:/data/db --publish=27017:27017 --name dbms -d mongo
 
