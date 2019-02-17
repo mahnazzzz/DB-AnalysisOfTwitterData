@@ -33,7 +33,7 @@ To make use of the --headerline switch when importing the data with mongoimport,
 
 # Problem
 
-through python I could not conceive to mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, through mongodb i connected to the database and find data i should show
+Through python I could not conceive to mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, through mongodb i connected to the database and find data i should show
 
 ![image](https://user-images.githubusercontent.com/20173643/52914947-57406300-32ce-11e9-9e79-7a6601fc188e.png)
 
