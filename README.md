@@ -48,7 +48,9 @@ Application has to be able to answer queries corresponding to the following ques
 ![image](https://user-images.githubusercontent.com/20173643/52914916-219b7a00-32ce-11e9-86cc-ca0589f4dc0a.png)
 
 - Which Twitter users link the most to other Twitter users? (Provide the top ten.)
-db.tweets.aggregate([{'$match':{'text':{'$regex':"@\w+"}}},{'$addFields': {"mentions":1}},{'$group':{"_id":"$user", "mentions":{'$sum':1}}},{'$sort':{"mentions":-1}},{'$limit':10}])
+
+ db.tweets.aggregate([{'$match':{'text':{'$regex':"@\w+"}}},{'$addFields': {"mentions":1}},{'$group':{"_id":"$user", "mentions":{'$sum':1}}},{'$sort':{"mentions":-1}},{'$limit':10}])
+ 
 ![image](https://user-images.githubusercontent.com/20173643/52914760-8e157980-32cc-11e9-82d8-a2b2ebff7554.png)
 - Who is are the most mentioned Twitter users? (Provide the top five.)
  db.tweets.aggregate([{'$addFields': {'words':{'$split':['$text', ' ']}}},{'$unwind':"$words"},{'$match':{'words':{'$regex':"@\w+",'$options':'m'}}},{'$group':{'_id':"$words",'total':{'$sum':1}}},{'$sort':{'total':-1}}, {'$limit':5}])
