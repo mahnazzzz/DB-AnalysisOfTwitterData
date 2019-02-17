@@ -137,9 +137,9 @@ The Time to Live or TTL feature in collections expires documents after a period 
 
 Model | Atomicity |Data Lifecycle Management | Sharding | Indexes
 -------|----------|----------- | --------------- |--------------- 
-Arrays of Ancestors |  |  |  |
-Materialized paths |  |  | | 
-Nested Sets |  |  | | 
+Arrays of Ancestors | X  |  | X | X
+Materialized paths | X  |  | X | X
+Nested Sets | X |  | | X
 
 
 
