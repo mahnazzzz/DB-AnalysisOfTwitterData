@@ -53,17 +53,22 @@ Application has to be able to answer queries corresponding to the following ques
  
 ![image](https://user-images.githubusercontent.com/20173643/52914760-8e157980-32cc-11e9-82d8-a2b2ebff7554.png)
 - Who is are the most mentioned Twitter users? (Provide the top five.)
- db.tweets.aggregate([{'$addFields': {'words':{'$split':['$text', ' ']}}},{'$unwind':"$words"},{'$match':{'words':{'$regex':"@\w+",'$options':'m'}}},{'$group':{'_id':"$words",'total':{'$sum':1}}},{'$sort':{'total':-1}}, {'$limit':5}])
+ 
+ > db.tweets.aggregate([{'$addFields': {'words':{'$split':['$text', ' ']}}},{'$unwind':"$words"},{'$match':{'words':{'$regex':"@\w+",'$options':'m'}}},{'$group':{'_id':"$words",'total':{'$sum':1}}},{'$sort':{'total':-1}}, {'$limit':5}])
+
 ![image](https://user-images.githubusercontent.com/20173643/52914769-9cfc2c00-32cc-11e9-9009-197718581f12.png)
 - Who are the most active Twitter users (top ten)?
- db.tweets.aggregate([{'$group': {'_id': '$user', 'total': {'$sum':1}}},  {'$sort':{'total':-1}}, {'$limit':10} ])
+ 
+> db.tweets.aggregate([{'$group': {'_id': '$user', 'total': {'$sum':1}}},  {'$sort':{'total':-1}}, {'$limit':10} ])
+
 ![image](https://user-images.githubusercontent.com/20173643/52914783-b2715600-32cc-11e9-8c17-4b6ea767f349.png)
 - Who are the five most grumpy (most negative tweets)
 > db.tweets.aggregate([{'$match': {'text': {'$regex': "worst|wtf|damn|angry|pissed|mad"}}},{'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_negative_tweets': {'$sum': 1}}},{'$sort':{ 'emotion': 1, 'total_negative_tweets':-1}},
 {'$limit': 5}])
 ![image](https://user-images.githubusercontent.com/20173643/52914786-c026db80-32cc-11e9-8e0b-49a9e6a93965.png)
 - The most happy (most positive tweets)?
-db.tweets.aggregate([{'$match': {'text': {'$regex': "love|nice|good|great|amazing|happy"}}},{'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_positive_tweets': {'$sum': 1}}},{'$sort':{ 'emotion': -1, 'total_positive_tweets':-1
+
+> db.tweets.aggregate([{'$match': {'text': {'$regex': "love|nice|good|great|amazing|happy"}}},{'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_positive_tweets': {'$sum': 1}}},{'$sort':{ 'emotion': -1, 'total_positive_tweets':-1
 }}, {'$limit': 5}])
 
 ![image](https://user-images.githubusercontent.com/20173643/52914789-cd43ca80-32cc-11e9-8774-afc5d7805549.png)
