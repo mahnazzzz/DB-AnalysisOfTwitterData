@@ -4,6 +4,10 @@
 - Python
 - MongoDB
 
+# Problem
+
+through python I could not conceive to mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, through mongodb i connected to the database and find data i should show
+
 # Assignment  Analysis of Twitter Data
 
 Implement a small database application, which imports a dataset of Twitter tweets from the CSV file into database.
@@ -11,6 +15,8 @@ Implement a small database application, which imports a dataset of Twitter tweet
 Application has to be able to answer queries corresponding to the following questions:
 
 - How many Twitter users are in the database?
+
+
 - Which Twitter users link the most to other Twitter users? (Provide the top ten.)
 - Who is are the most mentioned Twitter users? (Provide the top five.)
 - Who are the most active Twitter users (top ten)?
