@@ -3,6 +3,7 @@
 
 - Python
 - MongoDB
+- Pycharm(Terminal)
 
 # Import Data
 
@@ -85,8 +86,27 @@ Application has to be able to answer queries corresponding to the following ques
 ![image](https://user-images.githubusercontent.com/20173643/52914789-cd43ca80-32cc-11e9-8774-afc5d7805549.png)
 
 
+# Assignment 3
 
 
+- Sharding:
+
+> Sharding is a method of splitting and storing a single logical dataset in multiple databases. By distributing the data among multiple machines, a cluster of database systems can store larger dataset and handle additional requests. Sharding is necessary if a dataset is too large to be stored in a single database.
+When it comes to scaling database, there are challenges, but it is good there is some options. The easiest option, of course, is to scale up your hardware and other choice is sharding or trying to shrink the problem with microservices etc.
+
+- Five sharding approaches
+1- Sharding by Customer or Tenant:
+Multi-tenant applications is that their data model develop gradually over time to provide more and more functionality.  sharding by tenant is a safe (and recommended) approach.  
+2- Sharding by Geography
+Some apps that require data to interact strongly across a defined geographic boundary (eg Foursquare) are less suitable for sharding by geography.
+3- Sharding by Entity ID to Randomly Distributed Data
+When we send out entity ID, we want to distribute data as straight as possible to maximize parallelism in our system. For a perfectly uniform distribution, you would shard at a random ID, essentially round the robin data.
+4- Sharding a Graph
+like Facebook and Instagram, apps that leverage the social graph. for exemple capture things such as the who (who subscribed to updates, who liked, etc.)
+5- Sharding by Time Partitioning
+
+> The Right Approach to Sharding Depends on Your App
+An example where time partitioning does make sense is when you're an ad network that only reports 30 days of data.
 
 
 
