@@ -119,6 +119,28 @@ An example where time partitioning does make sense is when you're an ad network 
 > The Right Approach to Sharding Depends on Your App
 An example where time partitioning does make sense is when you're an ad network that only reports 30 days of data.
 
+## Indexs
+
+> Indexes are used to quickly find data without having to search each row in a database table each time a database table is available. Indexes can be created using one or more columns in a database table that form the basis for both quick random entries and efficient access to ordered records.
+
+## Atomicity
+
+> Atomicity means that multiple operations can be grouped into a single logical device, that is, other threads of control that open the database will either see the changes or none of the changes. Atomicity is important for applications that want to update two related databases (for example, a primary database and secondary index) in a single logical action. Or to an application that wishes to update multiple entries in a database in a single logical action.
+
+## Data Lifecycle Management
+
+> Data modeling decisions should take data lifecycle management into consideration.
+The Time to Live or TTL feature in collections expires documents after a period of time. Consider using the TTL feature if your application requires some data to continue in the database for a limited time.
+
+
+# Modeling
+
+Model | Atomicity |Data Lifecycle Management | Sharding | Indexes
+-------|----------|----------- | --------------- |--------------- 
+Arrays of Ancestors |  |  |  |
+Materialized paths |  |  | | 
+Nested Sets |  |  | | 
+
 
 
 
