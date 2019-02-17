@@ -50,19 +50,23 @@ Application has to be able to answer queries corresponding to the following ques
 - Which Twitter users link the most to other Twitter users? (Provide the top ten.)
 ![image](https://user-images.githubusercontent.com/20173643/52914760-8e157980-32cc-11e9-82d8-a2b2ebff7554.png)
 - Who is are the most mentioned Twitter users? (Provide the top five.)
-- Who are the most active Twitter users (top ten)?
-- Who are the five most grumpy (most negative tweets) and the most happy (most positive tweets)?
-
-
-
-
-
-
 ![image](https://user-images.githubusercontent.com/20173643/52914769-9cfc2c00-32cc-11e9-9009-197718581f12.png)
-
+- Who are the most active Twitter users (top ten)?
 ![image](https://user-images.githubusercontent.com/20173643/52914783-b2715600-32cc-11e9-8c17-4b6ea767f349.png)
+- Who are the five most grumpy (most negative tweets)
 ![image](https://user-images.githubusercontent.com/20173643/52914786-c026db80-32cc-11e9-8e0b-49a9e6a93965.png)
+- The most happy (most positive tweets)?
 ![image](https://user-images.githubusercontent.com/20173643/52914789-cd43ca80-32cc-11e9-8774-afc5d7805549.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
