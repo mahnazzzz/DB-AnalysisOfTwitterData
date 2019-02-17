@@ -50,6 +50,18 @@ Application has to be able to answer queries corresponding to the following ques
 - Who is are the most mentioned Twitter users? (Provide the top five.)
 - Who are the most active Twitter users (top ten)?
 - Who are the five most grumpy (most negative tweets) and the most happy (most positive tweets)?
+![image](https://user-images.githubusercontent.com/20173643/52914690-c6688800-32cb-11e9-8f51-7cbc6e5b59aa.png)
+![image](https://user-images.githubusercontent.com/20173643/52914741-5eff0800-32cc-11e9-805a-89a219863b88.png)
+
+![image](https://user-images.githubusercontent.com/20173643/52914746-6cb48d80-32cc-11e9-9a71-eb4beaf3bbc7.png)
+
+![image](https://user-images.githubusercontent.com/20173643/52914760-8e157980-32cc-11e9-82d8-a2b2ebff7554.png)
+
+![image](https://user-images.githubusercontent.com/20173643/52914769-9cfc2c00-32cc-11e9-9009-197718581f12.png)
+
+![image](https://user-images.githubusercontent.com/20173643/52914783-b2715600-32cc-11e9-8c17-4b6ea767f349.png)
+![image](https://user-images.githubusercontent.com/20173643/52914786-c026db80-32cc-11e9-8e0b-49a9e6a93965.png)
+![image](https://user-images.githubusercontent.com/20173643/52914789-cd43ca80-32cc-11e9-8774-afc5d7805549.png)
 
 
 
