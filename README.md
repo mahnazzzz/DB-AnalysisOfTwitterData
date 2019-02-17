@@ -48,6 +48,7 @@ Application has to be able to answer queries corresponding to the following ques
 ![image](https://user-images.githubusercontent.com/20173643/52914916-219b7a00-32ce-11e9-86cc-ca0589f4dc0a.png)
 
 - Which Twitter users link the most to other Twitter users? (Provide the top ten.)
+![image](https://user-images.githubusercontent.com/20173643/52914760-8e157980-32cc-11e9-82d8-a2b2ebff7554.png)
 - Who is are the most mentioned Twitter users? (Provide the top five.)
 - Who are the most active Twitter users (top ten)?
 - Who are the five most grumpy (most negative tweets) and the most happy (most positive tweets)?
@@ -55,7 +56,7 @@ Application has to be able to answer queries corresponding to the following ques
 
 
 
-![image](https://user-images.githubusercontent.com/20173643/52914760-8e157980-32cc-11e9-82d8-a2b2ebff7554.png)
+
 
 ![image](https://user-images.githubusercontent.com/20173643/52914769-9cfc2c00-32cc-11e9-9009-197718581f12.png)
 
