@@ -35,7 +35,7 @@ To make use of the --headerline switch when importing the data with mongoimport,
 
 through python I could not conceive to mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, through mongodb i connected to the database and find data i should show
 
-![image](https://user-images.githubusercontent.com/20173643/52914690-c6688800-32cb-11e9-8f51-7cbc6e5b59aa.png)
+![image](https://user-images.githubusercontent.com/20173643/52914947-57406300-32ce-11e9-9e79-7a6601fc188e.png)
 
 # Assignment  Analysis of Twitter Data
 
@@ -45,13 +45,13 @@ Application has to be able to answer queries corresponding to the following ques
 
 - How many Twitter users are in the database?
 
+![image](https://user-images.githubusercontent.com/20173643/52914916-219b7a00-32ce-11e9-86cc-ca0589f4dc0a.png)
 
 - Which Twitter users link the most to other Twitter users? (Provide the top ten.)
 - Who is are the most mentioned Twitter users? (Provide the top five.)
 - Who are the most active Twitter users (top ten)?
 - Who are the five most grumpy (most negative tweets) and the most happy (most positive tweets)?
-![image](https://user-images.githubusercontent.com/20173643/52914690-c6688800-32cb-11e9-8f51-7cbc6e5b59aa.png)
-![image](https://user-images.githubusercontent.com/20173643/52914741-5eff0800-32cc-11e9-805a-89a219863b88.png)
+
 
 ![image](https://user-images.githubusercontent.com/20173643/52914746-6cb48d80-32cc-11e9-9a71-eb4beaf3bbc7.png)
 
