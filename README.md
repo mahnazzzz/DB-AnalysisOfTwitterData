@@ -4,9 +4,38 @@
 - Python
 - MongoDB
 
+# Import Data
+
+In terminal in virtualmachine 
+
+- $ docker run --rm -v $(pwd)/data:/data/db --publish=27017:27017 --name dbms -d mongo
+
+- $ docker exec -it dbms bash
+
+In root
+
+- root@88385afac5fe:/$ apt-get update
+- root@88385afac5fe:/$ apt-get install -y wget
+- root@88385afac5fe:/$ apt-get install -y unzip
+
+Continue with downloading the data
+
+- root@88385afac5fe:/$ wget http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip
+
+In your VM the unzip package is not installed by default.
+
+- root@88385afac5fe:/$ unzip trainingandtestdata.zip
+- root@da738e09730f:/# mongoimport --drop --db social_net --collection tweets --type csv --headerline --file traning.1600000.processed.noemoticon.csv
+
+To make use of the --headerline switch when importing the data with mongoimport, we add a headerline accordingly:
+
+- root@88385afac5fe:/# sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv
+
 # Problem
 
 through python I could not conceive to mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, through mongodb i connected to the database and find data i should show
+
+![image](https://user-images.githubusercontent.com/20173643/52914690-c6688800-32cb-11e9-8f51-7cbc6e5b59aa.png)
 
 # Assignment  Analysis of Twitter Data
 
@@ -22,28 +51,5 @@ Application has to be able to answer queries corresponding to the following ques
 - Who are the most active Twitter users (top ten)?
 - Who are the five most grumpy (most negative tweets) and the most happy (most positive tweets)?
 
-# Import Data
 
-In terminal in virtualmachine 
-
-- $ docker run --rm -v $(pwd)/data:/data/db --publish=27017:27017 --name dbms -d mongo
-
-- $ docker exec -it dbms bash
-
-In root
-
-- root@88385afac5fe:/$ apt-get update
-- root@88385afac5fe:/$ apt-get install -y wget, unzip
-
-Continue with downloading the data
-
-- root@88385afac5fe:/$ wget http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip
-
-In your VM the unzip package is not installed by default.
-
-- root@88385afac5fe:/$ unzip trainingandtestdata.zip
-
-To make use of the --headerline switch when importing the data with mongoimport, we add a headerline accordingly:
-
-- root@88385afac5fe:/# sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv
 
