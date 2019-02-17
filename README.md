@@ -53,7 +53,7 @@ Application has to be able to answer queries corresponding to the following ques
 - Who are the five most grumpy (most negative tweets) and the most happy (most positive tweets)?
 
 
-![image](https://user-images.githubusercontent.com/20173643/52914746-6cb48d80-32cc-11e9-9a71-eb4beaf3bbc7.png)
+
 
 ![image](https://user-images.githubusercontent.com/20173643/52914760-8e157980-32cc-11e9-82d8-a2b2ebff7554.png)
 
