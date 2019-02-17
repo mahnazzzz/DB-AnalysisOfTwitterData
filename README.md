@@ -89,12 +89,12 @@ Application has to be able to answer queries corresponding to the following ques
 # Assignment 3
 
 
-- Sharding:
+## Sharding:
 
 > Sharding is a method of splitting and storing a single logical dataset in multiple databases. By distributing the data among multiple machines, a cluster of database systems can store larger dataset and handle additional requests. Sharding is necessary if a dataset is too large to be stored in a single database.
 When it comes to scaling database, there are challenges, but it is good there is some options. The easiest option, of course, is to scale up your hardware and other choice is sharding or trying to shrink the problem with microservices etc.
 
- ##  Five sharding approaches
+ ###  Five sharding approaches
 
 > 1- Sharding by Customer or Tenant:
 
