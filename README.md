@@ -33,9 +33,18 @@ To make use of the --headerline switch when importing the data with mongoimport,
 
 # Problem
 
-Through python I could not conceive to mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, through mongodb i connected to the database and find data i should show
+Through python I could not get data from mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, into the docker through mongodb i connected to the database and find data i should get
 
 ![image](https://user-images.githubusercontent.com/20173643/52914947-57406300-32ce-11e9-9e79-7a6601fc188e.png)
+
+I got the connect to Mongodb Compass Community both for localhost and host = 127.0.0.1 port 27017, but in both cases the data is stored in the local where i could not through run '.py' file get data from mongoDB
+
+> ![image](https://user-images.githubusercontent.com/20173643/52919114-144ab380-32ff-11e9-9564-c2ae6732c7ff.png)
+
+Besides that through vagrant and docker I would connect into local mongoDB database, but I couldn't do it where it gives the error the whole time the gate 27017 is busy, then I will restart the port or through another port connect into the database but it was also not successful
+
+> ![image](https://user-images.githubusercontent.com/20173643/52919150-7efbef00-32ff-11e9-8d5b-bdb603b98475.png)
+
 
 # Assignment  Analysis of Twitter Data
 
