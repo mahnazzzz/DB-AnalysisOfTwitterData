@@ -56,7 +56,7 @@ Application has to be able to answer queries corresponding to the following ques
 
 - How many Twitter users are in the database?
 
-> ![image](https://user-images.githubusercontent.com/20173643/52914916-219b7a00-32ce-11e9-86cc-ca0589f4dc0a.png)
+> ![image](https://user-images.githubusercontent.com/20173643/52944434-abe7ea80-336f-11e9-96d0-c610b04df547.png)
 
 - Which Twitter users link the most to other Twitter users? (Provide the top ten.)
 
