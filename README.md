@@ -36,7 +36,7 @@ To make use of the --headerline switch when importing the data with mongoimport,
 
 Through python I could not get data from mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, into the docker through mongodb i connected to the database and find data i should get
 
-![image](https://user-images.githubusercontent.com/20173643/83575422-b5c73a00-a52f-11ea-860a-afd274a7dc76.png)
+![image](https://user-images.githubusercontent.com/20173643/83579720-53c00200-a53a-11ea-8fe5-3ea7f7fde6da.png)
 
 I got the connect to Mongodb Compass Community both for localhost and host = 127.0.0.1 port 27017, but in both cases the data is stored in the local where i could not through run '.py' file get data from mongoDB
 
