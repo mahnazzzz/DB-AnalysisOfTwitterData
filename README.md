@@ -61,13 +61,16 @@ Application has to be able to answer queries corresponding to the following ques
 - Which Twitter users link the most to other Twitter users? (Provide the top ten.)
 
 ![image](https://user-images.githubusercontent.com/20173643/83580398-528fd480-a53c-11ea-9887-537699e417fb.png)
+
  > db.tweets.aggregate([{'$match':{'text':{'$regex':"@\w+"}}},{'$addFields': {"mentions":1}},{'$group':{"_id":"$user", "mentions":{'$sum':1}}},{'$sort':{"mentions":-1}},{'$limit':10}])
  
  
 - Who is are the most mentioned Twitter users? (Provide the top five.)
+
+ ![image](https://user-images.githubusercontent.com/20173643/83580540-97b40680-a53c-11ea-8a1d-55789300986c.png)
  
  > db.tweets.aggregate([{'$addFields': {'words':{'$split':['$text', ' ']}}},{'$unwind':"$words"},{'$match':{'words':{'$regex':"@\w+",'$options':'m'}}},{'$group':{'_id':"$words",'total':{'$sum':1}}},{'$sort':{'total':-1}}, {'$limit':5}])
-![image](https://user-images.githubusercontent.com/20173643/52914769-9cfc2c00-32cc-11e9-9009-197718581f12.png)
+
 
 - Who are the most active Twitter users (top ten)?
  
