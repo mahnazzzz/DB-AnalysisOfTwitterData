@@ -41,7 +41,8 @@ Through python I could not get data from mongoDB which is in the local, even tho
 I got the connect to Mongodb Compass Community both for localhost and host = 127.0.0.1 port 27017, but in both cases the data is stored in the local where i could not through run '.py' file get data from mongoDB
 
 > ![image](https://user-images.githubusercontent.com/20173643/83579916-d9dc4880-a53a-11ea-82c3-9f56fedec95b.png)
-![image](https://user-images.githubusercontent.com/20173643/83580019-3ccddf80-a53b-11ea-8049-0eb88ce2b500.png)
+![image](https://user-images.githubusercontent.com/20173643/83580201-b36add00-a53b-11ea-9c62-4fa623025f81.png)
+
 
 Besides that through vagrant and docker I would connect into local mongoDB database, but I couldn't do it where it gives the error the whole time the gate 27017 is busy, then I will restart the port or through another port connect into the database but it was also not successful
 
@@ -56,7 +57,7 @@ Application has to be able to answer queries corresponding to the following ques
 
 - How many Twitter users are in the database?
 
-> ![image](https://user-images.githubusercontent.com/20173643/52944434-abe7ea80-336f-11e9-96d0-c610b04df547.png)
+> ![image](https://user-images.githubusercontent.com/20173643/83580019-3ccddf80-a53b-11ea-8049-0eb88ce2b500.png)
 
 - Which Twitter users link the most to other Twitter users? (Provide the top ten.)
 
