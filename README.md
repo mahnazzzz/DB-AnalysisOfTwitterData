@@ -73,22 +73,26 @@ Application has to be able to answer queries corresponding to the following ques
 
 
 - Who are the most active Twitter users (top ten)?
+
+ ![image](https://user-images.githubusercontent.com/20173643/83580745-19a42f80-a53d-11ea-89ed-f749e19234e7.png)
  
 > db.tweets.aggregate([{'$group': {'_id': '$user', 'total': {'$sum':1}}},  {'$sort':{'total':-1}}, {'$limit':10} ])
-![image](https://user-images.githubusercontent.com/20173643/52914783-b2715600-32cc-11e9-8c17-4b6ea767f349.png)
+
 
 - Who are the five most grumpy (most negative tweets)
 
+![image](https://user-images.githubusercontent.com/20173643/83580847-65ef6f80-a53d-11ea-9bc0-7688669f20b0.png)
+
 > db.tweets.aggregate([{'$match': {'text': {'$regex': "worst|wtf|damn|angry|pissed|mad"}}},{'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_negative_tweets': {'$sum': 1}}},{'$sort':{ 'emotion': 1, 'total_negative_tweets':-1}},
 {'$limit': 5}])
-![image](https://user-images.githubusercontent.com/20173643/52914786-c026db80-32cc-11e9-8e0b-49a9e6a93965.png)
+
 
 - The most happy (most positive tweets)?
 
+![image](https://user-images.githubusercontent.com/20173643/83580968-ca123380-a53d-11ea-9de0-e32a16231a6b.png)
+
 > db.tweets.aggregate([{'$match': {'text': {'$regex': "love|nice|good|great|amazing|happy"}}},{'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_positive_tweets': {'$sum': 1}}},{'$sort':{ 'emotion': -1, 'total_positive_tweets':-1
 }}, {'$limit': 5}])
-![image](https://user-images.githubusercontent.com/20173643/52914789-cd43ca80-32cc-11e9-8774-afc5d7805549.png)
-
 
 # Assignment 3
 
