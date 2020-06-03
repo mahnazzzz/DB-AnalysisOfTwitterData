@@ -24,7 +24,6 @@ In Git Bash Here type:
  Pycharm in terminal  
 
 - $ docker run --rm -v $(pwd)/data:/data/db --publish=27017:27017 --name dbms -d mongo
-
 - $ docker exec -it dbms bash
 
 In root
@@ -41,12 +40,13 @@ In your VM the unzip package is not installed by default.
 
 - root@88385afac5fe:/# unzip trainingandtestdata.zip
 - root@88385afac5fe:/# mongoimport --drop --db social_net --collection tweets --type csv --headerline --file traning.1600000.processed.noemoticon.csv
-
 - root@88385afac5fe:/# iconv -f ISO-8859-1 -t utf-8 training.1600000.processed.noemoticon.csv > converted-utf8.csv' (this converts it to utf8)
 
 To make use of the --headerline switch when importing the data with mongoimport, we add a headerline accordingly:
 
 - root@88385afac5fe:/# sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv
+
+
 
 # Problem
 
@@ -66,6 +66,24 @@ Besides that through vagrant and docker I would connect into local mongoDB datab
 
 # Løsning
 
+
+
+- root@88385afac5fe:/# mongo
+- > show dbs
+
+```sh
+admin       0.000GB
+config      0.000GB
+local       0.000GB
+social_net  0.217GB
+```
+- > use social_net
+- > db.tweets.find()
+
+```sh
+{ "_id" : ObjectId("5ed7b475a22f7286db9e52ae"), "0" : 0, "1467810369" : 1467810672, "Mon Apr 06 22:19:45 PDT 2009" : "Mon Apr 06 22:19:49 PDT 2009", "NO_QUERY" : "NO_QUERY", "_TheSpecialOne_" : "scotthamilton", "@switchfoot http://twitpic" : { "com/2y1zl - Awww, that's a bummer" : { "  You shoulda got David Carr of Third Day to do it" : { " ;D" : "is upset that he can't update his Facebook by texting it... and might cry as a result  School today also. Blah!" } } } }
+{ "_id" : ObjectId("5ed7b475a22f7286db9e52af"), "0" : 0, "1467810369" : 1467810917, "Mon Apr 06 22:19:45 PDT 2009" : "Mon Apr 06 22:19:53 PDT 2009", "NO_QUERY" : "NO_QUERY", "_TheSpecialOne_" : "mattycus", "@switchfoot http://twitpic" : { "com/2y1zl - Awww, that's a bummer" : { "  You shoulda got David Carr of Third Day to do it" : { " ;D" : "@Kenichan I dived many times for the ball. Managed to save 50%  The rest go out of bounds" } } } }
+```
 Application has to be able to answer queries corresponding to the following questions:
 
 - How many Twitter users are in the database?
