@@ -8,6 +8,8 @@ You can find the assignment [here](https://github.com/datsoftlyngby/soft2019spri
 
 # Program 
 
+- Vagrant
+- Docker
 - MongoDB
 - Pycharm(Terminal)
 - Python
@@ -15,7 +17,11 @@ You can find the assignment [here](https://github.com/datsoftlyngby/soft2019spri
 
 # Import Data
 
-In Pycharm in terminal 
+In Git Bash Here type:
+- vagrant up
+- vagrant ssh
+
+ Pycharm in terminal  
 
 - $ docker run --rm -v $(pwd)/data:/data/db --publish=27017:27017 --name dbms -d mongo
 
