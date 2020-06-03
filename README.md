@@ -48,9 +48,9 @@ To make use of the --headerline switch when importing the data with mongoimport,
 
 
 
-# Problem
 
-Through python I could not get data from mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, into the docker through mongodb i connected to the database and find data i should get
+
+
 
 ![image](https://user-images.githubusercontent.com/20173643/83579720-53c00200-a53a-11ea-8fe5-3ea7f7fde6da.png)
 
@@ -66,7 +66,7 @@ Besides that through vagrant and docker I would connect into local mongoDB datab
 
 # Løsning
 
-
+Through python I could not get data from mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, into the docker through mongodb i connected to the database and find data i should get
 
 - root@88385afac5fe:/# mongo
 - > show dbs
