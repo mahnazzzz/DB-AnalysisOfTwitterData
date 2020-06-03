@@ -77,7 +77,7 @@ social_net  0.217GB
 
 
 
- ![image](https://user-images.githubusercontent.com/20173643/83679310-7b1cda80-a5df-11ea-91ba-86bab6ed63a3.png)
+![image](https://user-images.githubusercontent.com/20173643/83680131-d69b9800-a5e0-11ea-83be-1fbb78e20333.png)
  
 
 
