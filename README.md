@@ -51,7 +51,7 @@ he connect to Mongodb Compass Community both for localhost and host = 127.0.0.1 
 Besides that through vagrant and docker I would connect into local mongoDB database, but I couldn't do it where it gives the error the whole time the gate 27017 is busy, then I will restart the port or through another port connect into the database but it was also not successful
 
 
-# Løsning
+# Solution
 
 After I couldn't connected to the Mongo DB from either editor Jupyter notebook and Python to port where MongoDB was, though the data is imported. That's whyats inside the docker, I connected to the MongoDB and i got the data we should get from the CSV file using a regular expration and aggregation.
 
