@@ -75,7 +75,7 @@ social_net  0.217GB
 
 - How many Twitter users are in the database?
 
-> ![image](https://user-images.githubusercontent.com/20173643/83679310-7b1cda80-a5df-11ea-91ba-86bab6ed63a3.png)
+ ![image](https://user-images.githubusercontent.com/20173643/83679310-7b1cda80-a5df-11ea-91ba-86bab6ed63a3.png)
 
 - Which Twitter users link the most to other Twitter users? (Provide the top ten.)
 
