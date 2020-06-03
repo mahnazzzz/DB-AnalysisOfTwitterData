@@ -1,3 +1,4 @@
+You can find the assignment [her](https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment2.md) 
 
 # Program 
 
