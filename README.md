@@ -36,8 +36,9 @@ In your VM the unzip package is not installed by default.
 - root@88385afac5fe:/# unzip trainingandtestdata.zip
 - root@88385afac5fe:/# mongoimport --drop --db social_net --collection tweets --type csv --headerline --file traning.1600000.processed.noemoticon.csv
 
-To make use of the --headerline switch when importing the data with mongoimport, we add a headerline accordingly:
 - root@88385afac5fe:/# iconv -f ISO-8859-1 -t utf-8 training.1600000.processed.noemoticon.csv > converted-utf8.csv' (this converts it to utf8)
+
+To make use of the --headerline switch when importing the data with mongoimport, we add a headerline accordingly:
 
 - root@88385afac5fe:/# sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv
 
