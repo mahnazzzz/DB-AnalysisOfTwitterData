@@ -62,7 +62,7 @@ Application has to be able to answer queries corresponding to the following ques
 
 ![image](https://user-images.githubusercontent.com/20173643/83580398-528fd480-a53c-11ea-9887-537699e417fb.png)
 ```sh
-$  db.tweets.aggregate([{'$match':{'text':{'$regex':"@\w+"}}},
+db.tweets.aggregate([{'$match':{'text':{'$regex':"@\w+"}}},
                         {'$addFields': {"mentions":1}},
                         {'$group':{"_id":"$user", "mentions":{'$sum':1}}},
                         {'$sort':{"mentions":-1}},
@@ -76,7 +76,7 @@ $  db.tweets.aggregate([{'$match':{'text':{'$regex':"@\w+"}}},
 
  ![image](https://user-images.githubusercontent.com/20173643/83580540-97b40680-a53c-11ea-8a1d-55789300986c.png)
  ```sh
-$  db.tweets.aggregate([{'$addFields': {'words':{'$split':['$text', ' ']}}},
+db.tweets.aggregate([{'$addFields': {'words':{'$split':['$text', ' ']}}},
                          {'$unwind':"$words"},
                          {'$match':{'words':{'$regex':"@\w+",'$options':'m'}}},
                          {'$group':{'_id':"$words",'total':{'$sum':1}}},
@@ -90,8 +90,7 @@ $  db.tweets.aggregate([{'$addFields': {'words':{'$split':['$text', ' ']}}},
  ![image](https://user-images.githubusercontent.com/20173643/83580745-19a42f80-a53d-11ea-89ed-f749e19234e7.png)
  
  ```sh
- 
-$  db.tweets.aggregate([{'$group': {'_id': '$user', 'total': {'$sum':1}}},
+ db.tweets.aggregate([{'$group': {'_id': '$user', 'total': {'$sum':1}}},
                          {'$sort':{'total':-1}},
                          {'$limit':10}
                          ])
@@ -101,7 +100,7 @@ $  db.tweets.aggregate([{'$group': {'_id': '$user', 'total': {'$sum':1}}},
 
 ![image](https://user-images.githubusercontent.com/20173643/83580847-65ef6f80-a53d-11ea-9bc0-7688669f20b0.png)
  ```sh
-$  db.tweets.aggregate([{'$match': {'text': {'$regex': "worst|wtf|damn|angry|pissed|mad"}}},
+db.tweets.aggregate([{'$match': {'text': {'$regex': "worst|wtf|damn|angry|pissed|mad"}}},
                                     {'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_negative_tweets': {'$sum': 1}}},
                                     {'$sort':{ 'emotion': 1, 'total_negative_tweets':-1}},
                                     {'$limit': 5}
@@ -112,7 +111,7 @@ $  db.tweets.aggregate([{'$match': {'text': {'$regex': "worst|wtf|damn|angry|pis
 
 ![image](https://user-images.githubusercontent.com/20173643/83580968-ca123380-a53d-11ea-9de0-e32a16231a6b.png)
 ```sh
-$  db.tweets.aggregate([{'$match': {'text': {'$regex': "love|nice|good|great|amazing|happy"}}},
+db.tweets.aggregate([{'$match': {'text': {'$regex': "love|nice|good|great|amazing|happy"}}},
                          {'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_positive_tweets': {'$sum': 1}}},
                          {'$sort':{ 'emotion': -1, 'total_positive_tweets':-1}}, 
                          {'$limit': 5}
