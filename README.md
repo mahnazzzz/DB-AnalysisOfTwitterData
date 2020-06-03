@@ -1,3 +1,9 @@
+
+
+# Assignment  Analysis of Twitter Data
+
+Implement a small database application, which imports a dataset of Twitter tweets from the CSV file into database.
+
 You can find the assignment [here](https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment2.md) 
 
 # Program 
@@ -48,10 +54,7 @@ Besides that through vagrant and docker I would connect into local mongoDB datab
 
 
 
-
-# Assignment  Analysis of Twitter Data
-
-Implement a small database application, which imports a dataset of Twitter tweets from the CSV file into database.
+# Løsning
 
 Application has to be able to answer queries corresponding to the following questions:
 
