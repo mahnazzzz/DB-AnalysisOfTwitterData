@@ -11,18 +11,14 @@ You can find the assignment [here](https://github.com/datsoftlyngby/soft2019spri
 - Vagrant
 - Docker
 - MongoDB
-- Pycharm(Terminal)
-- Python
-- Regular expressions
+- Regular expressions\aggregation
+
 
 # Import Data
 
 In Git Bash Here type:
-- vagrant up
-- vagrant ssh
-
- Pycharm in terminal  
-
+- $ vagrant up
+- $ vagrant ssh
 - $ docker run --rm -v $(pwd)/data:/data/db --publish=27017:27017 --name dbms -d mongo
 - $ docker exec -it dbms bash
 
@@ -46,15 +42,7 @@ To make use of the --headerline switch when importing the data with mongoimport,
 
 - root@88385afac5fe:/# sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv
 
-
-
-
-
-
-
-![image](https://user-images.githubusercontent.com/20173643/83579720-53c00200-a53a-11ea-8fe5-3ea7f7fde6da.png)
-
-I got the connect to Mongodb Compass Community both for localhost and host = 127.0.0.1 port 27017, but in both cases the data is stored in the local where i could not through run '.py' file get data from mongoDB
+he connect to Mongodb Compass Community both for localhost and host = 127.0.0.1 port 27017, but in both cases the data is stored in the local where i could not through run '.py' file get data from mongoDB
 
 > ![image](https://user-images.githubusercontent.com/20173643/83579916-d9dc4880-a53a-11ea-82c3-9f56fedec95b.png)
 ![image](https://user-images.githubusercontent.com/20173643/83580201-b36add00-a53b-11ea-9c62-4fa623025f81.png)
@@ -63,10 +51,9 @@ I got the connect to Mongodb Compass Community both for localhost and host = 127
 Besides that through vagrant and docker I would connect into local mongoDB database, but I couldn't do it where it gives the error the whole time the gate 27017 is busy, then I will restart the port or through another port connect into the database but it was also not successful
 
 
-
 # Løsning
 
-Through python I could not get data from mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, into the docker through mongodb i connected to the database and find data i should get
+Through jupyter python or pycharm I could not get data from mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, into the docker in mongodb i connected to the database and find data i should get
 
 - root@88385afac5fe:/# mongo
 - > show dbs
