@@ -10,6 +10,8 @@ You can find the assignment [here](https://github.com/datsoftlyngby/soft2019spri
 
 - MongoDB
 - Pycharm(Terminal)
+- Python
+- Regular expressions
 
 # Import Data
 
