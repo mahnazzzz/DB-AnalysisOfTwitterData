@@ -53,10 +53,10 @@ Besides that through vagrant and docker I would connect into local mongoDB datab
 
 # Løsning
 
-Through jupyter python or pycharm I could not get data from mongoDB which is in the local, even though the data is imported. So therefore through the docker made a container and have mongo db there, into the docker in mongodb i connected to the database and find data i should get
+After I couldn't connected to the Mongo DB from either editor Jupyter notebook and Python to port where MongoDB was, though the data is imported. That's whyats inside the docker, I connected to the MongoDB and i got the data we should get from the CSV file using a regular expration and aggregation.
 
 - root@88385afac5fe:/# mongo
-- > show dbs
+ > show dbs
 
 ```sh
 admin       0.000GB
@@ -64,14 +64,14 @@ config      0.000GB
 local       0.000GB
 social_net  0.217GB
 ```
-- > use social_net
-- > db.tweets.find()
+ > use social_net
+ > db.tweets.find()
 
 ```sh
 { "_id" : ObjectId("5ed7b475a22f7286db9e52ae"), "0" : 0, "1467810369" : 1467810672, "Mon Apr 06 22:19:45 PDT 2009" : "Mon Apr 06 22:19:49 PDT 2009", "NO_QUERY" : "NO_QUERY", "_TheSpecialOne_" : "scotthamilton", "@switchfoot http://twitpic" : { "com/2y1zl - Awww, that's a bummer" : { "  You shoulda got David Carr of Third Day to do it" : { " ;D" : "is upset that he can't update his Facebook by texting it... and might cry as a result  School today also. Blah!" } } } }
 { "_id" : ObjectId("5ed7b475a22f7286db9e52af"), "0" : 0, "1467810369" : 1467810917, "Mon Apr 06 22:19:45 PDT 2009" : "Mon Apr 06 22:19:53 PDT 2009", "NO_QUERY" : "NO_QUERY", "_TheSpecialOne_" : "mattycus", "@switchfoot http://twitpic" : { "com/2y1zl - Awww, that's a bummer" : { "  You shoulda got David Carr of Third Day to do it" : { " ;D" : "@Kenichan I dived many times for the ball. Managed to save 50%  The rest go out of bounds" } } } }
 ```
-Application has to be able to answer queries corresponding to the following questions:
+
 
 - How many Twitter users are in the database?
 
