@@ -75,32 +75,50 @@ $  db.tweets.aggregate([{'$match':{'text':{'$regex':"@\w+"}}},
 - Who is are the most mentioned Twitter users? (Provide the top five.)
 
  ![image](https://user-images.githubusercontent.com/20173643/83580540-97b40680-a53c-11ea-8a1d-55789300986c.png)
- 
- > db.tweets.aggregate([{'$addFields': {'words':{'$split':['$text', ' ']}}},{'$unwind':"$words"},{'$match':{'words':{'$regex':"@\w+",'$options':'m'}}},{'$group':{'_id':"$words",'total':{'$sum':1}}},{'$sort':{'total':-1}}, {'$limit':5}])
+ ```sh
+$ > db.tweets.aggregate([{'$addFields': {'words':{'$split':['$text', ' ']}}},
+                         {'$unwind':"$words"},
+                         {'$match':{'words':{'$regex':"@\w+",'$options':'m'}}},
+                         {'$group':{'_id':"$words",'total':{'$sum':1}}},
+                         {'$sort':{'total':-1}},
+                         {'$limit':5}])
+ ```
 
 
 - Who are the most active Twitter users (top ten)?
 
  ![image](https://user-images.githubusercontent.com/20173643/83580745-19a42f80-a53d-11ea-89ed-f749e19234e7.png)
  
-> db.tweets.aggregate([{'$group': {'_id': '$user', 'total': {'$sum':1}}},  {'$sort':{'total':-1}}, {'$limit':10} ])
+ ```sh
+ 
+$ > db.tweets.aggregate([{'$group': {'_id': '$user', 'total': {'$sum':1}}},
+                         {'$sort':{'total':-1}},
+                         {'$limit':10}
+                         ])
 
-
+ ```
 - Who are the five most grumpy (most negative tweets)
 
 ![image](https://user-images.githubusercontent.com/20173643/83580847-65ef6f80-a53d-11ea-9bc0-7688669f20b0.png)
-
-> db.tweets.aggregate([{'$match': {'text': {'$regex': "worst|wtf|damn|angry|pissed|mad"}}},{'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_negative_tweets': {'$sum': 1}}},{'$sort':{ 'emotion': 1, 'total_negative_tweets':-1}},
-{'$limit': 5}])
-
+ ```sh
+$ > db.tweets.aggregate([{'$match': {'text': {'$regex': "worst|wtf|damn|angry|pissed|mad"}}},
+                                    {'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_negative_tweets': {'$sum': 1}}},
+                                    {'$sort':{ 'emotion': 1, 'total_negative_tweets':-1}},
+                                    {'$limit': 5}
+                                    ])
+ ```
 
 - The most happy (most positive tweets)?
 
 ![image](https://user-images.githubusercontent.com/20173643/83580968-ca123380-a53d-11ea-9de0-e32a16231a6b.png)
+```sh
+$ > db.tweets.aggregate([{'$match': {'text': {'$regex': "love|nice|good|great|amazing|happy"}}},
+                         {'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_positive_tweets': {'$sum': 1}}},
+                         {'$sort':{ 'emotion': -1, 'total_positive_tweets':-1}}, 
+                         {'$limit': 5}
+                         ])
 
-> db.tweets.aggregate([{'$match': {'text': {'$regex': "love|nice|good|great|amazing|happy"}}},{'$group':{'_id':"$user", 'emotion': {'$avg': "$polarity"}, 'total_positive_tweets': {'$sum': 1}}},{'$sort':{ 'emotion': -1, 'total_positive_tweets':-1
-}}, {'$limit': 5}])
-
+```
 # Assignment 3
 
 
