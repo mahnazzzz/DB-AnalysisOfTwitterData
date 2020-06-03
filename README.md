@@ -56,7 +56,7 @@ Besides that through vagrant and docker I would connect into local mongoDB datab
 After I couldn't connected to the Mongo DB from either editor Jupyter notebook and Python to port where MongoDB was, though the data is imported. That's whyats inside the docker, I connected to the MongoDB and i got the data we should get from the CSV file using a regular expration and aggregation.
 
 - root@88385afac5fe:/# mongo
- > show dbs
+- >show dbs
 
 ```sh
 admin       0.000GB
@@ -64,7 +64,11 @@ config      0.000GB
 local       0.000GB
 social_net  0.217GB
 ```
- > use social_net
+ - >use social_net
+ - >show collections
+```sh
+tweets
+```
  > db.tweets.find()
 
 ```sh
