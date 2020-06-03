@@ -64,12 +64,13 @@ config      0.000GB
 local       0.000GB
 social_net  0.217GB
 ```
- - >use social_net
- - >show collections
+ - use social_net
+ - show collections
+ 
 ```sh
 tweets
 ```
- > db.tweets.find()
+ - db.tweets.find()
 
 ```sh
 { "_id" : ObjectId("5ed7b475a22f7286db9e52ae"), "0" : 0, "1467810369" : 1467810672, "Mon Apr 06 22:19:45 PDT 2009" : "Mon Apr 06 22:19:49 PDT 2009", "NO_QUERY" : "NO_QUERY", "_TheSpecialOne_" : "scotthamilton", "@switchfoot http://twitpic" : { "com/2y1zl - Awww, that's a bummer" : { "  You shoulda got David Carr of Third Day to do it" : { " ;D" : "is upset that he can't update his Facebook by texting it... and might cry as a result  School today also. Blah!" } } } }
